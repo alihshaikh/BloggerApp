@@ -1,0 +1,57 @@
+GET http://localhost:5000/api/user/
+###
+POST http://localhost:5000/api/user/signup
+Content-Type: application/json
+
+{
+    "name": "testacc",
+    "email": "test@gmail.com",
+    "password": "pwdtst"
+}
+
+###
+POST http://localhost:5000/api/user/login
+Content-Type: application/json
+
+{
+    "email": "test@gmail.com",
+    "password": "pwdtst"
+}
+
+###
+
+GET http://localhost:5000/api/blog
+
+###
+
+POST http://localhost:5000/api/blog/post
+Content-Type: application/json
+
+{
+    "title": "blog testing",
+    "description": "another post to test this!!",
+    "image": "xxxx",
+    "user": "62f404eaa12e1fc2e22b3a7c"
+}
+
+###
+
+PUT http://localhost:5000/api/blog/update/62f2bd04d791cf712e8541f7
+Content-Type: application/json
+
+{
+    "title": "Updated blog",
+    "description": "My first updated blog"
+}
+
+###
+GET http://localhost:5000/api/blog/62f2c6d3ef29cc81ceb9d28c
+
+###
+DELETE  http://localhost:5000/api/blog/62f2c6d3ef29cc81ceb9d28c
+
+###
+DELETE http://localhost:5000/api/blog/62f2cbcdd8d7fbeedd921aab
+
+###
+GET http://localhost:5000/api/blog/user/62f2b7fd569d0997e0e50ba5
